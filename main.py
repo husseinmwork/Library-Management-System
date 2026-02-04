@@ -1,6 +1,19 @@
-from models.book import Book
+from services.library_service import LibraryService
 
-book = Book("Python Basics", "John")
+service = LibraryService()
 
-print(book.title)
-print(book.author)
+service.add_sample_data()
+
+service.show_books()
+
+user = service.register_user("Hussein")
+
+service.borrow_book(user, "Python Basics")
+
+service.show_books()
+
+user.list_books()
+
+service.return_book(user, "Python Basics")
+
+service.show_books()

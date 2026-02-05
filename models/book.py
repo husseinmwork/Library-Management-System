@@ -3,6 +3,9 @@ class Book:
         self.title = title
         self.author = author
         self.isbn = isbn
+        #Encapsulation
+        #The double underscore __ before a name means that the variable is private.
+        #This prevents any external code from directly changing its state.
         self.__available = True
 
     def borrow(self):
